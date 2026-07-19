@@ -46,8 +46,10 @@ export const StatCard: React.FC<StatCardProps> = ({
       variants={shouldReduceMotion ? {} : itemVariants}
       whileHover={shouldReduceMotion ? {} : { translateY: -2, scale: 1.01 }}
       className={`
-        bg-surface-card rounded-2xl p-6 border transition-shadow duration-300
-        ${glow ? 'border-brand-gold/30 glow-gold hover:glow-gold-strong' : 'border-surface-border hover:border-brand-gold/30'}
+        bg-surface-card rounded-2xl p-6 border transition-all duration-300
+        ${glow 
+          ? 'border-brand-gold/30 glow-gold hover:border-brand-gold/60 hover:shadow-[0_0_20px_rgba(212,175,55,0.3)]' 
+          : 'border-surface-border hover:border-brand-gold/50 hover:shadow-[0_0_15px_rgba(212,175,55,0.15)]'}
         flex flex-col justify-between relative overflow-hidden group
       `}
     >
